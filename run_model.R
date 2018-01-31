@@ -41,8 +41,9 @@ iterate_model(model, characters, max_length, diversity, vectors, 40)
 
 # create the result
 result <- 
-  (runif(100)+0.2) %>%
-  map_chr(~ generate_plate(model,characters,.x)) %>%
+  runif(250,0.2,0.8) %>% #randomly choose diversity for each plate
+  map_chr(~ generate_plate(model, characters, max_length, .x)) %>%
   data_frame(plate = .) %>%
   distinct %>%
+  filter(!is.na(plate), plate != "") %>%
   anti_join(data_frame(plate = plates),by="plate") # remove plates that are already actual banned plates
