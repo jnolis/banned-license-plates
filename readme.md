@@ -12,3 +12,5 @@ The code is broken into three files:
   1. __load_data_functions.R__ - this file has the functions that handle loading and formatting the data
   2. __model_functions.R__ - this file has the functions that make the model and generate the license plates
   3. __run_model.R__ - this script actually runs all the functions and generates a data frame of license plates
+
+To run the code, first make sure your have keras and tensorflow installed on your computer. You can use the [Rstudio guide](https://keras.rstudio.com/) to do this.
