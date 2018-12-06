@@ -10,10 +10,11 @@ require(keras)
 get_plates <- function(max_length = 7) {
   read_lines("Data/Az-bannedplates_2012.txt") %>%
   str_replace_all("[^[:alnum:] ]", "") %>% # remove any special characters
-  toupper %>% # convert to upper case
-  unique %>% # remove any duplicate plates
-  (function (x) x[!is.na(x) & x!= "" & nchar(x) <= max_length])
-  # the final function is to remove any NA plates, blanks, or plates that are too long
+  toupper() %>% # convert to upper case
+  unique() %>% # remove any duplicate plates
+  discard(is.na) %>% # remove any NA plates
+  discard(~ .x == "") %>% # remove empty plates
+  discard(~nchar(.x) > max_length) # remove plates that are too long
 }
 
 add_stop <- function(plates, symbol="+") str_c(plates,symbol) # make a note for the end of a plate
@@ -24,7 +25,7 @@ add_stop <- function(plates, symbol="+") str_c(plates,symbol) # make a note for 
 split_into_subs <- function(plates){
   plates %>%
     tokenize_characters(lowercase=FALSE) %>%
-    map(function(plate) map(1:length(plate),function(i) plate[1:i])) %>%
+    map(~ purrr::accumulate(.x,c)) %>%
     flatten()
 }
 
