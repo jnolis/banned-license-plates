@@ -28,7 +28,7 @@ generate_result <- function(model, character_lookup, max_length, temperature=1){
   next_letter <- ""
   
   # while we haven't hit a stop character and the name isn't too long
-  while(next_letter != "+" && length(in_progress_letters) < 30){
+  while(next_letter != "+" && length(in_progress_letters) < max_length){
     # prep the data to run in the model again
     previous_letters_data <- 
       lapply(list(in_progress_letters), function(.x){
