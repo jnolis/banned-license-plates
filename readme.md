@@ -7,7 +7,7 @@
   <img src="https://saturncloud.io/images/embed/run-in-saturn-cloud.svg" alt="Deploy">
 </a>
 
-_Run this code for free in seconds on Saturn Cloud_
+_Edit and run this code online in RStudio for free using Saturn Cloud_
 
 This R code uses Keras to train a neural network on license plates that were banned by the Arizona Department of Transportation. It was my attempt at using neural networks to make something funny like the AI trained on [band names](https://twitter.com/botnikstudios/status/955870327652970496
 ), [video game titles](https://disexplications.tumblr.com/post/159165060164/video-game-titles-created-by-a-neural-network), and [pokemon](http://aiweirdness.com/post/147834883707/pokemon-generated-by-neural-network).
