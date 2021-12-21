@@ -1,0 +1,19 @@
+{
+  "name": "banned-license-plates",
+  "image_uri": "saturncloud/saturn-rstudio:2021.11.10",
+  "description": "Use a neural network with keras to generate offensive license plactes",
+  "working_directory": "/home/jovyan/git-repos/banned-license-plates",
+  "start_script": "pip install tensorflow\nRscript -e \"install.packages(c('keras', 'dplyr', 'readr', 'stringr', 'purrrr', 'tidyr', 'keras'))\"",
+  "git_repositories": [
+    {
+      "url": "https://github.com/jnolis/banned-license-plates.git",
+      "location": "banned-license-plates",
+      "on_restart": "preserve changes"
+    }
+  ],
+  "rstudio_server": {
+    "instance_type": "large",
+    "disk_space": "10Gi"
+  },
+  "version": "2021.11.10-9"
+}

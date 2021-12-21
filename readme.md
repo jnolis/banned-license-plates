@@ -3,6 +3,12 @@
 ![Offensive license plates](banned-plates.jpg)
 
 
+<a href="https://raw.githubusercontent.com/saturncloud/banned-license-plates/main/saturn.json">
+  <img src="https://saturncloud.io/images/embed/run-in-saturn-cloud.svg" alt="Deploy">
+</a>
+
+_Run this code for free in seconds on Saturn Cloud_
+
 This R code uses Keras to train a neural network on license plates that were banned by the Arizona Department of Transportation. It was my attempt at using neural networks to make something funny like the AI trained on [band names](https://twitter.com/botnikstudios/status/955870327652970496
 ), [video game titles](https://disexplications.tumblr.com/post/159165060164/video-game-titles-created-by-a-neural-network), and [pokemon](http://aiweirdness.com/post/147834883707/pokemon-generated-by-neural-network).
 
@@ -44,7 +50,8 @@ generate_many_results(20, model, character_lookup, max_length)
 
 ## CHANGE LOG:
 
-* 2018-06-08: Fixed some minor issues with the max_length parameter. 
+* 2021-12-21: Updated for newer TensorFlow and added Saturn Cloud support.
+* 2019-06-08: Fixed some minor issues with the max_length parameter. 
 * 2019-05-29: This code was refactored to reflect best practices and be in line with other models, such as the  [pet names](https://github.com/nolis-llc/pet-names) neural network.
 * 2018-12-05: Made the code use the pad_sequences and to_categorical functions from the keras package
 * 2018-02-08: Initial release
