@@ -3,7 +3,7 @@
 ![Offensive license plates](banned-plates.jpg)
 
 
-<a href="https://raw.githubusercontent.com/saturncloud/banned-license-plates/main/saturn.json">
+<a href="https://app.community.saturnenterprise.io/dash/resources?recipeUrl=https://raw.githubusercontent.com/jnolis/banned-license-plates/main/saturn.json">
   <img src="https://saturncloud.io/images/embed/run-in-saturn-cloud.svg" alt="Deploy">
 </a>
 
