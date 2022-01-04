@@ -1,6 +1,6 @@
 {
   "name": "banned-license-plates",
-  "image_uri": "saturncloud/saturn-rstudio:2021.11.10",
+  "image_uri": "saturncloud/saturn-rstudio-tensorflow:2021.11.10",
   "description": "Use a neural network with keras to generate offensive license plactes",
   "working_directory": "/home/jovyan/git-repos/banned-license-plates",
   "start_script": "pip install tensorflow\nRscript -e \"install.packages(c('keras', 'dplyr', 'readr', 'stringr', 'purrrr', 'tidyr', 'keras'))\"",
